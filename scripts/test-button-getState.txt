@@ -1,0 +1,8 @@
+[VarDef, editMode, 0]
+
+//Create Button
+[IButton, "Test Edit", "Test Edit button for its State",
+    [VarSet, editMode, [IGet, Transform:Edit]]
+    
+    [Note, editMode, , 3]
+]//end button

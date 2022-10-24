@@ -1,0 +1,19 @@
+[VarDef, editMode, 0]
+
+//Create Button
+[IButton, "EditMode", "Display Edit Mode to User",
+
+    [VarSet, editMode, [IGet, Transform:Edit]]
+
+    [If, editMode = 1,
+    
+        [Note, "Edit is ON", , 3]
+        
+    ,
+    
+        [Note, "Edit os OFF", , 3]
+        
+    ]// End If
+
+
+]//end button
