@@ -5,7 +5,7 @@
 //Loop 10 times
 [Loop, 10,
 
-    [VarSet, cpunter, (counter + 1)]
+    [VarSet, counter, (counter+1)]
 
     [VarSet, message, [StrMerge, "The counter is now at : ", counter]]
 
