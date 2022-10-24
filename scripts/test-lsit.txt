@@ -1,0 +1,7 @@
+[VarDef, textureWidth(10), 0 ] // Defines a lsit variable of 10 numebrs
+
+[VarDef, filename(10), ""]// Defines a list variable of 10 strings
+
+[VarSet, textureWidth(9), 1024] // sets value of lsit variable at index 9
+
+[VarSet, filename(0), "Franks_Head.ztl" ] // sets value of list variable at index 0

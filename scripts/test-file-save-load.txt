@@ -1,0 +1,9 @@
+[If, [FileExists, "ZSphere_Scorpion.ztl"],
+
+    [Note, "File is present", , 3]
+
+,
+
+    [Note, "File is missing", , 3]
+
+] //end if

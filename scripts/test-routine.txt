@@ -1,0 +1,19 @@
+[RoutineDef, CheckEditButton,
+
+    //Start of command block
+    [VarSet, editMode, [IGet, Transform:Edit]]
+
+    [If, editMode = 1,
+    
+        [Note, "Tool is in Edit Mode. ZScript aborted", , 3]
+
+        [Exit] // exits script
+        
+    ]//End If
+
+]//End Routine
+
+
+//Can be called like function
+
+// [RoutineCall, CheckEditButton]
