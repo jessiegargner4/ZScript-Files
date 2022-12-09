@@ -1,0 +1,130 @@
+/*Second subPalette Pass*/
+
+//Define Varibles
+[VarDef, import, 0]
+[VarDef, export, 0]
+[VarDef, importMesh, 0]
+[VarDef, exportMesh, 0]
+[VarDef, bind, 0]
+
+/*Animating SubPalette*/
+
+
+//Create Palette
+[IPalette, "Animating", 1, 'a']
+
+//create new subpalettes in Animating palette:
+[ISubPalette, Animating: Keyframes]
+
+//[ISubPalette, Animating: Export Keyframes]
+[ISubPalette, Animating: Mesh]
+
+
+//Create Buttons
+[IButton,"Animating: Keyframes: Import ", "Import Keyframes",
+
+    [VarSet, import, [IGet, Animating: import]]
+
+    [If, import = 1,
+
+        [Note, "Keyframes have been imported", , 3]
+        
+        ,
+        
+        [Note, "Keyframes could not be imported", , 3]
+
+    ]//End if
+
+ , , .5, , , .175
+
+]//End button
+
+[IButton, "Animating: Keyframes: Export ", "Export Keyframes",
+
+    [VarSet, export, [IGet, Animating: export]]
+
+    [If, export = 1,
+
+        [Note, "Keyframes have been exported", , 3]
+        
+        ,
+        
+        [Note, "Keyframes could not be exported", , 3]
+
+    ]//End if
+
+, , .5, , , .175
+
+]
+
+[IButton, "Animating: Mesh: Bind ", "Bind Rig to Mesh",
+
+    [VarSet, bind, [IGet, Animating: bind]]
+
+    [If, bind = 1,
+
+        [Note, "Rig has been bound to Mesh", , 3]
+        
+        ,
+        
+        [Note, "Rig could not be bound to Mesh", , 3]
+
+    ]//End if
+
+ , , .33, , , .175
+
+]
+
+[IButton, "Animating: Mesh: Export ", "Export Mesh",
+
+    [VarSet, exportMesh, [IGet, Animating: exportMesh]]
+
+    [If, exportMesh = 1,
+
+        [Note, "Mesh ahs been exported ", , 3]
+        
+        ,
+        
+        [Note, "Mesh could not be exported ", , 3]
+
+    ]//End if
+    
+  , , .33, , , .175
+
+]
+
+[IButton, "Animating: Mesh: Import ", "Import Mesh",
+
+    [VarSet, importMesh, [IGet, Animating: importMesh]]
+
+    [If, importMesh = 1,
+
+        [Note, "Mesh has been imported", , 3]
+        
+        ,
+        
+        [Note, "Mesh could not be imported ", , 3 ]
+        
+    ]//End if
+
+  , , .33, , , .175
+
+]
+
+/*
+//colors
+[FrontColorSet,"Did this work???????",0xde0a0a, 0x21f506, 0x1a06f5]
+[FrontColorSet, "RGB Color Set", 0xde0a0a, 0x21f506, 0x1a06f5]
+[IColorSet, 0xde0a0a, 0x21f506, 0x1a06f5]
+*/
+
+//Enables switch to work more than once
+[IEnable,  "Animating: Keyframes: Import "]
+
+[IEnable,  "Animating: Keyframes: Export "]
+
+[IEnable,  "Animating: Mesh: bind "]
+
+[IEnable, "Animating: Mesh: Export "]
+
+[IEnable, "Animating: Mesh: Import "]
